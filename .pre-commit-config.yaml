@@ -1,0 +1,10 @@
+- repo: local
+  hooks:
+    - id: "comments-detector"
+      name: "Comments detector"
+      entry: comments_detector.py
+      types: [text]
+      exclude: ".yaml$|.yml$"
+      language: "python"
+      description: "Detecting commented block of code in the commited files"
+
