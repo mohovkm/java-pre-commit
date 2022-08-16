@@ -48,7 +48,7 @@ def get_changes(chunk: str) -> Iterable:
 
 
 def search_comments(filename: str, changes: Iterable):
-    matcher = re.compile(r"(^\+\s*\/\/\s+(?!(WHEN|THEN)).*$)", re.M)
+    matcher = re.compile(r"(^\+\s*\/\/\s+(?!(WHEN|THEN|GIVEN)).*$)", re.M)
     for change in changes:
         mt = matcher.findall(change)
         if mt:
