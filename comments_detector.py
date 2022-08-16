@@ -38,8 +38,7 @@ def get_filename(chunk: str) -> str:
     try:
         return chunk.splitlines()[0].strip().split()[0][2:]
     except IndexError:
-        print(chunk)
-        logger.error("Error while reading diff filename")
+        logger.error("Error while reading diff filename: \n%s", chunk)
         exit(1)
 
 

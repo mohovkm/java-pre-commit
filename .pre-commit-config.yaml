@@ -5,6 +5,6 @@
       entry: comments_detector.py
       types: [text]
       exclude: ".yaml$|.yml$"
-      language: "python"
+      language: "system"
       description: "Detecting commented block of code in the commited files"
 
